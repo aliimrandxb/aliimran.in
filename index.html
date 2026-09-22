@@ -446,6 +446,30 @@
       transform-style: preserve-3d;
     }
 
+    /* ── Mobile Chat Fullscreen ── */
+    @media (max-width: 767px) {
+      .mobile-chat-fullscreen {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100dvh !important;
+        z-index: 9999 !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        border: none !important;
+        display: flex;
+        flex-direction: column;
+      }
+      .mobile-chat-fullscreen #ai-chat-window {
+        height: 100% !important;
+        max-height: none !important;
+        flex: 1;
+        border-radius: 0 !important;
+      }
+    }
+
     /* ── Floating Dock Nav ── */
     #floatingDock {
       position: fixed;
@@ -1883,7 +1907,7 @@
           <span class="w-2 h-2 rounded-full bg-sky-600"></span>
           <span>08 / CURIOSITIES &amp; CLARIFICATIONS</span>
         </div>
-      <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden max-w-3xl mx-auto">
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden max-w-3xl mx-auto transition-all" id="ai-chat-container">
         <!-- Chat Header -->
         <div class="bg-[#0b1c30] px-4 py-3 flex items-center justify-between">
           <div class="flex items-center gap-3">
@@ -1899,15 +1923,20 @@
               </div>
             </div>
           </div>
-          <div class="flex gap-1.5">
-            <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+          <div class="flex items-center gap-2">
+            <button id="ai-chat-close-btn" class="hidden text-white/50 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors" onclick="aiChat.closeFullscreen()">
+              <span class="material-symbols-outlined text-lg">close</span>
+            </button>
+            <div class="flex gap-1.5" id="ai-chat-dots">
+              <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+            </div>
           </div>
         </div>
 
         <!-- Chat Body -->
-        <div class="p-4 sm:p-6 bg-slate-50/80 flex flex-col h-[450px] relative" id="ai-chat-window">
+        <div class="p-4 sm:p-6 bg-slate-50/80 flex flex-col h-[60vh] min-h-[400px] max-h-[600px] md:h-[500px] relative transition-all" id="ai-chat-window">
           
           <!-- Scrollable Chat History -->
           <div id="ai-chat-history" class="flex-1 overflow-y-auto space-y-4 pr-2 mb-16 scrollbar-hide">
@@ -1952,7 +1981,7 @@
           
           <!-- Chat Input -->
           <form id="ai-chat-form" class="absolute bottom-4 left-4 right-4 flex items-center" onsubmit="aiChat.handleSubmit(event)">
-            <input type="text" id="ai-chat-input" placeholder="Type a message to chat with me..." 
+            <input type="text" id="ai-chat-input" placeholder="Type a message to chat with me..." onfocus="aiChat.openFullscreen()"
               class="w-full pl-4 pr-12 py-3 rounded-2xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none shadow-sm" autocomplete="off" />
             <button type="submit" class="absolute right-1.5 p-2 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition-colors flex items-center justify-center shadow-md disabled:opacity-50" id="ai-chat-submit">
               <span class="material-symbols-outlined text-[18px]">send</span>
@@ -2554,14 +2583,31 @@
       ],
       knowledgeBase: [
         { keywords: ["experience", "years", "work", "job", "career"], answer: "I have over 9+ years of experience in the UAE as an IT Operations Executive, focusing on enterprise infrastructure, ERP mobility, and full-stack creative web development." },
-        { keywords: ["education", "degree", "study", "university", "bba"], answer: "I hold a Bachelor of Business Administration (BBA) from IBVE Karnataka, Brillianz Education in Dubai, alongside specialized technical certifications." },
-        { keywords: ["projects", "portfolio", "creative", "build", "app", "website"], answer: "My creative work spans from Hydr0 (an employee productivity platform) to Poepik (an AI poetry maker). You can scroll up to the 'Creative Products' section to see more case studies!" },
-        { keywords: ["location", "dubai", "where", "city", "country", "visa"], answer: "I am based in Dubai, UAE (Al Quoz 2) with a valid and transferable employment visa." },
-        { keywords: ["skills", "tech", "stack", "erp", "tools", "software"], answer: "My core expertise includes SAP ERP, Microsoft 365, Linux Servers, network management, alongside modern frontend web development using HTML, CSS, JavaScript, and Tailwind." },
-        { keywords: ["contact", "email", "phone", "call", "reach", "telegram", "message"], answer: "You can email me at alisaraimir@gmail.com, or start a chat on Telegram at @aliimrantalkbot. You can also just type your message here and I'll get it instantly via my bot!" },
+        { keywords: ["education", "degree", "study", "university", "bba", "college"], answer: "I hold a Bachelor of Business Administration (BBA) from IBVE Karnataka, Brillianz Education in Dubai, alongside specialized technical certifications like IBM IT Support Professional and Microsoft Copilot Agent." },
+        { keywords: ["projects", "portfolio", "creative", "build", "app", "website", "hydr0", "poepik"], answer: "My creative work spans from Hydr0 (an employee productivity platform) to Poepik (an AI poetry maker). I love building progressive web apps (PWAs), SaaS tools, and bespoke WordPress solutions." },
+        { keywords: ["pricing", "cost", "rate", "freelance", "fee", "budget"], answer: "My rates depend entirely on the scope of the project. I prefer to understand your exact requirements first, and then provide a tailored, transparent quote. Let's discuss your project!" },
+        { keywords: ["tech", "stack", "languages", "programming", "skills"], answer: "I work with HTML, CSS, JavaScript, Node.js, and frameworks like Tailwind and React for frontend. On the enterprise side, I manage ERP systems, SQL databases, Microsoft 365, and Linux Servers." },
+        { keywords: ["location", "dubai", "where", "city", "country", "visa", "remote"], answer: "I am based in Dubai, UAE (Al Quoz 2) with a valid and transferable employment visa. I'm open to on-site roles in the GCC and remote global partnerships for creative development." },
+        { keywords: ["resume", "cv", "download"], answer: "I don't have a direct download link here, but if you leave your contact details below, I'd be happy to email you my complete, updated Resume/CV." },
         { keywords: ["hello", "hi", "hey", "assalamualaikum", "greetings"], answer: "Walaikum Assalam / Hello! I am the AI assistant of Ali Imran. How can I help you today? You can ask me about his experience, projects, or just type a message to send directly to him." }
       ],
       
+      openFullscreen() {
+        if (window.innerWidth < 768) {
+          document.getElementById('ai-chat-container').classList.add('mobile-chat-fullscreen');
+          document.getElementById('ai-chat-close-btn').classList.remove('hidden');
+          document.getElementById('ai-chat-dots').classList.add('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+
+      closeFullscreen() {
+        document.getElementById('ai-chat-container').classList.remove('mobile-chat-fullscreen');
+        document.getElementById('ai-chat-close-btn').classList.add('hidden');
+        document.getElementById('ai-chat-dots').classList.remove('hidden');
+        document.body.style.overflow = '';
+      },
+
       addMessage(text, isUser = false) {
         const history = document.getElementById('ai-chat-history');
         const indicator = document.getElementById('ai-typing-indicator');
@@ -2682,12 +2728,15 @@
               this.hideTyping();
               if (response.ok) {
                 this.addMessage("✅ Message delivered successfully directly to his terminal! He will get back to you shortly.");
+                setTimeout(() => this.closeFullscreen(), 3000); // Close mobile popup after 3 seconds on success
               } else {
                 this.addMessage("⚠️ Hmm, there was an issue transmitting the signal. Please try the direct contact form below.");
+                setTimeout(() => this.closeFullscreen(), 3000);
               }
             } catch (err) {
               this.hideTyping();
               this.addMessage("⚠️ Connection error. Please try the direct contact form below.");
+              setTimeout(() => this.closeFullscreen(), 3000);
             }
           }
         }, 1000);
