@@ -685,22 +685,22 @@
 
           <!-- ID CARD -->
           <div
-            class="relative w-72 sm:w-80 rounded-3xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out transform animate-badge-float overflow-hidden -mt-1"
-            id="idBadge">
+            class="relative w-72 sm:w-80 rounded-3xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out transform overflow-visible -mt-1"
+            id="idBadge" style="will-change: transform;">
 
             <!-- Card top slot (pill) -->
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-2.5 bg-slate-800 rounded-b-full z-10"></div>
 
             <!-- Purple gradient header area -->
-            <div class="relative h-44 bg-gradient-to-br from-violet-600 via-purple-500 to-indigo-400 overflow-visible">
+            <div class="relative h-44 bg-gradient-to-br from-violet-600 via-purple-500 to-indigo-400 rounded-t-3xl overflow-hidden">
               <!-- Sheen overlay -->
               <div class="absolute inset-0 bg-gradient-to-bl from-white/20 via-transparent to-transparent"></div>
-              <!-- Profile photo - pushed up from center -->
-              <div class="absolute -bottom-12 left-1/2 -translate-x-1/2">
-                <div class="w-28 h-28 rounded-full border-4 border-white shadow-2xl overflow-hidden ring-4 ring-teal-400/70">
-                  <img src="./ali-imran-profile.jpg" alt="Ali Imran"
-                    class="w-full h-full object-cover" style="object-position: 82% 15%;" />
-                </div>
+            </div>
+            <!-- Profile photo - overlapping header/body boundary -->
+            <div class="absolute left-1/2 -translate-x-1/2" style="top: 108px; z-index: 10;">
+              <div class="w-28 h-28 rounded-full border-4 border-white shadow-2xl overflow-hidden ring-4 ring-teal-400/70">
+                <img src="./ali-imran-profile.jpg" alt="Ali Imran"
+                  class="w-full h-full object-cover" style="object-position: 82% 15%;" />
               </div>
             </div>
 
@@ -2535,8 +2535,8 @@
 
     // ── 4. AI Chatbot Logic
     const aiChat = {
-      state: 0, // 0: Idle, 1: Awaiting Name, 2: Awaiting Contact, 3: Finished
-      userData: { message: '', name: '', contact: '' },
+      state: 0, // 0: Idle, 1: Awaiting Req, 2: Awaiting Name, 3: Awaiting Contact, 4: Finished
+      userData: { message: '', requirement: '', name: '', contact: '' },
       faqs: [
         `The short answer? <strong>A</strong>li <strong>I</strong>mran = <strong>AI</strong>. It's a playful nod to my initials and the fact that I automate, optimize, and engineer systems with machine-like precision. While I might not be a neural network, my approach to solving complex IT Operations, mobility, and creative web development challenges is highly systematic, data-driven, and designed to scale—just like the best AI.`,
         `I am currently based in Dubai, UAE with a valid and transferable employment visa, making me perfectly positioned for on-site IT Operations Executive and systems management roles within the GCC. However, for creative web development, SaaS product builds, and consulting, I actively partner with clients globally.`,
@@ -2642,20 +2642,25 @@
               this.addMessage(matchedAnswer);
               setTimeout(() => document.getElementById('ai-suggested-prompts').classList.remove('hidden'), 500);
             } else {
-              // Fallback to Lead Collection Flow
+              // Fallback to Lead Collection Flow: Ask for Requirements first
               this.userData.message = text;
-              this.addMessage("That's interesting! I'd love to connect and discuss that further. Could you please tell me your Name or Organization?");
+              this.addMessage("That sounds really interesting! Before we dive deeper, could you briefly describe what kind of project or specific requirements you have in mind?");
               this.state = 1;
             }
           } 
           else if (this.state === 1) {
-            this.userData.name = text;
-            this.addMessage(`Great to meet you, ${this.userData.name}! Finally, what is your email or phone number so I can reach you back?`);
+            this.userData.requirement = text;
+            this.addMessage("Got it, that helps a lot! I'd love to connect and discuss this further. Could you please tell me your Name or Organization?");
             this.state = 2;
-          } 
+          }
           else if (this.state === 2) {
-            this.userData.contact = text;
+            this.userData.name = text;
+            this.addMessage(`Great to meet you, ${this.userData.name}! Finally, what is your email or Telegram handle so I can reach you back?`);
             this.state = 3;
+          } 
+          else if (this.state === 3) {
+            this.userData.contact = text;
+            this.state = 4;
             document.getElementById('ai-chat-input').disabled = true;
             document.getElementById('ai-chat-submit').disabled = true;
             this.addMessage("Got it! I am transmitting your dispatch to Ali Imran's Terminal via secure Telegram Bot API now...");
@@ -2663,7 +2668,7 @@
             // Trigger Telegram Fetch
             const botToken = '8906725635:AAG7qraKOMSlneDIqTgZZMC5v2E3HRq2ano';
             const chatId = '8681515130';
-            const payload = `🚀 *New Bot Chat Inquiry*\n\n*Name:* ${this.userData.name}\n*Contact:* ${this.userData.contact}\n*Message:* ${this.userData.message}`;
+            const payload = `🚀 *New Bot Chat Inquiry*\n\n*Name:* ${this.userData.name}\n*Contact:* ${this.userData.contact}\n*Requirements:* ${this.userData.requirement}\n*Initial Msg:* ${this.userData.message}`;
             const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
             
             this.showTyping();
