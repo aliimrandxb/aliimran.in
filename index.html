@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="google-site-verification" content="fFc5gcLHaZA8SAgSRAqP6Ly8tUn1EGq8joKrjmPguoc" />
   <title>Ali Imran | IT Operations Executive &amp; Creative Developer | Dubai</title>
 
   <!-- AISEO / Ghost Mode Human-Like SEO -->
@@ -454,7 +455,7 @@
         left: 0 !important;
         width: 100vw !important;
         height: 100dvh !important;
-        z-index: 9999 !important;
+        z-index: 99999 !important;
         border-radius: 0 !important;
         margin: 0 !important;
         max-width: 100% !important;
@@ -467,6 +468,11 @@
         max-height: none !important;
         flex: 1;
         border-radius: 0 !important;
+      }
+      body.chat-open #floatingDock,
+      body.chat-open #scrollToTopBtn,
+      body.chat-open a[title="Chat with Ali Imran"] {
+        display: none !important;
       }
     }
 
@@ -558,6 +564,187 @@
         opacity: 0
       }
     }
+
+    /* ── Portfolio Gallery ── */
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: #fff;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px) scale(1.015);
+      box-shadow: 0 24px 48px -12px rgba(11, 25, 44, 0.18);
+      border-color: rgba(14, 165, 233, 0.4);
+    }
+    .gallery-card .gallery-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+    }
+    .gallery-card .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-card:hover .gallery-img-wrap img {
+      transform: scale(1.08);
+    }
+    .gallery-card .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(11, 25, 44, 0.85) 100%);
+      opacity: 0;
+      transition: opacity 0.35s;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-card .gallery-overlay .expand-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .gallery-card .gallery-overlay .expand-btn:hover {
+      background: rgba(14, 165, 233, 0.5);
+      transform: scale(1.1);
+    }
+    .gallery-filter-btn {
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      color: #64748b;
+      transition: all 0.25s;
+    }
+    .gallery-filter-btn:hover {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #0369a1;
+    }
+    .gallery-filter-btn.active {
+      background: #0b192c;
+      color: #fff;
+      border-color: #0b192c;
+    }
+    .gallery-card.gallery-hidden {
+      display: none;
+    }
+
+    /* Lightbox */
+    #galleryLightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9990;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(20px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    #galleryLightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+    #galleryLightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      border-radius: 16px;
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+    }
+    #galleryLightbox .lb-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    #galleryLightbox .lb-close:hover {
+      background: rgba(239, 68, 68, 0.4);
+      transform: scale(1.1);
+    }
+    #galleryLightbox .lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+    #galleryLightbox .lb-nav:hover {
+      background: rgba(14, 165, 233, 0.4);
+      transform: translateY(-50%) scale(1.1);
+    }
+    #galleryLightbox .lb-prev { left: 24px; }
+    #galleryLightbox .lb-next { right: 24px; }
+    #galleryLightbox .lb-caption {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(11, 25, 44, 0.8);
+      backdrop-filter: blur(12px);
+      padding: 10px 24px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .gallery-screenshot-count {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      color: #94a3b8;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #f1f5f9;
+    }
   </style>
   <link rel="icon" href="./ali-imran-profile.jpg" type="image/jpeg" />
   <meta property="og:image" content="./ali-imran-profile.jpg" />
@@ -612,6 +799,8 @@
           data-nav="systems" href="#systems">Enterprise</a>
         <a class="nav-link px-3 py-1.5 rounded-full hover:text-sky-700 hover:bg-sky-50/80 transition-all border border-transparent hover:border-sky-200/50"
           data-nav="creative" href="#creative">Creative</a>
+        <a class="nav-link px-3 py-1.5 rounded-full hover:text-sky-700 hover:bg-sky-50/80 transition-all border border-transparent hover:border-sky-200/50"
+          data-nav="portfolio-gallery" href="#portfolio-gallery">Gallery</a>
         <a class="nav-link px-3 py-1.5 rounded-full hover:text-sky-700 hover:bg-sky-50/80 transition-all border border-transparent hover:border-sky-200/50"
           data-nav="experience" href="#experience">Experience</a>
         <a class="nav-link px-3 py-1.5 rounded-full hover:text-sky-700 hover:bg-sky-50/80 transition-all border border-transparent hover:border-sky-200/50"
@@ -1466,6 +1655,448 @@
     </div>
   </section>
   <!-- ========================================================================= -->
+  <!-- 4B. PORTFOLIO GALLERY — INTERACTIVE SCREENSHOT SHOWCASE                   -->
+  <!-- ========================================================================= -->
+  <section class="py-24 px-6 max-w-7xl mx-auto" data-nav="portfolio-gallery" id="portfolio-gallery">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+      <div>
+        <div
+          class="inline-flex items-center gap-2 font-mono text-xs font-bold text-sky-700 uppercase tracking-widest mb-2">
+          <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+          <span>PORTFOLIO GALLERY</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0b1c30] tracking-tight">
+          Live Project Screenshots
+        </h2>
+      </div>
+      <p class="font-mono text-xs text-slate-500 max-w-xs">
+        Real screenshots from 9 production systems — enterprise platforms, web apps, and creative products.
+      </p>
+    </div>
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap gap-2 mb-8" id="galleryFilterBar">
+      <button class="gallery-filter-btn active" onclick="filterGallery('all')">All Projects</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('hrm')">HRM System</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('dist')">Distribution Mgmt</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('x2queue')">x2Queue</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('zoon')">Zoon Trust</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('shalalapp')">Shalal APP</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('whatsapp')">WhatsApp API</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('x2crm')">X2CRM</button>
+    </div>
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal-elem stagger-children" id="portfolioGalleryGrid">
+
+      <!-- ═══ HRM SYSTEM ═══ -->
+      <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/hrm_01_login.png" alt="HRM System Login" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">HRM System</span>
+              <p class="text-sm font-semibold mt-1">Login & Access Control</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Login Portal</h4>
+            <span class="text-[11px] text-slate-500">Enterprise Access Gateway</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 6</span>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/hrm_02_dashboard.png" alt="HRM Alert Command Matrix" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">HRM System</span>
+              <p class="text-sm font-semibold mt-1">Alert Command Matrix</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Command Matrix</h4>
+            <span class="text-[11px] text-slate-500">Real-time Alert Dashboard</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">verified</span> Live</span>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/hrm_03_kanban.png" alt="HRM Kanban Pipeline" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">HRM System</span>
+              <p class="text-sm font-semibold mt-1">PRO Renewal Pipeline Kanban</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Kanban Pipeline</h4>
+            <span class="text-[11px] text-slate-500">Document Renewal Tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/hrm_04_workforce.png" alt="HRM Workforce Directory" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">HRM System</span>
+              <p class="text-sm font-semibold mt-1">Workforce Directory</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Workforce Directory</h4>
+            <span class="text-[11px] text-slate-500">Employee Management</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/hrm_05_celebrations.png" alt="HRM Celebrations Hub" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">HRM System</span>
+              <p class="text-sm font-semibold mt-1">Celebrations Hub</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Celebrations Hub</h4>
+            <span class="text-[11px] text-slate-500">Birthday & Anniversary Alerts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/hrm_06_assets.png" alt="HRM Asset Custody" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">HRM System</span>
+              <p class="text-sm font-semibold mt-1">IT Asset Custody & Handover</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Asset Management</h4>
+            <span class="text-[11px] text-slate-500">IT Equipment Tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ DISTRIBUTION MANAGEMENT ═══ -->
+      <div class="gallery-card" data-project="dist" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/dist_01_login.png" alt="Distribution Login" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-amber-300 uppercase tracking-wider">Distribution Mgmt</span>
+              <p class="text-sm font-semibold mt-1">Login Screen — Split Panel</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Distribution — Login</h4>
+            <span class="text-[11px] text-slate-500">Glassmorphic Split Panel</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 5</span>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="dist" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/dist_02_dashboard.png" alt="Distribution Dashboard" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-amber-300 uppercase tracking-wider">Distribution Mgmt</span>
+              <p class="text-sm font-semibold mt-1">Executive KPI Dashboard</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Distribution — Dashboard</h4>
+            <span class="text-[11px] text-slate-500">KPI Analytics Overview</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="dist" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/dist_03_workflow.png" alt="Distribution Workflow" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-amber-300 uppercase tracking-wider">Distribution Mgmt</span>
+              <p class="text-sm font-semibold mt-1">Workflow Manager</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Distribution — Workflow</h4>
+            <span class="text-[11px] text-slate-500">Queue & Approval Engine</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="dist" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/dist_04_users.png" alt="Distribution User Management" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-amber-300 uppercase tracking-wider">Distribution Mgmt</span>
+              <p class="text-sm font-semibold mt-1">User Management Console</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Distribution — Users</h4>
+            <span class="text-[11px] text-slate-500">Role-Based Access Control</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="dist" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/dist_05_drilldown.png" alt="Distribution Visit Drilldown" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-amber-300 uppercase tracking-wider">Distribution Mgmt</span>
+              <p class="text-sm font-semibold mt-1">Visit Drilldown Analytics</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Distribution — Drilldown</h4>
+            <span class="text-[11px] text-slate-500">Geo Route Analytics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ X2QUEUE ═══ -->
+      <div class="gallery-card" data-project="x2queue" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/x2queue_01_main.png" alt="x2Queue Login" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider">x2Queue</span>
+              <p class="text-sm font-semibold mt-1">Queue Management Login</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">x2Queue — Login Portal</h4>
+            <span class="text-[11px] text-slate-500">Access Control Panel</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 4</span>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="x2queue" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/x2queue_03_tv.png" alt="x2Queue TV Display" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider">x2Queue</span>
+              <p class="text-sm font-semibold mt-1">TV Display — Token Board</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">x2Queue — TV Display</h4>
+            <span class="text-[11px] text-slate-500">Customer-Facing Queue Board</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="x2queue" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/x2queue_04_operator.png" alt="x2Queue Operator Panel" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider">x2Queue</span>
+              <p class="text-sm font-semibold mt-1">Operator Console</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">x2Queue — Operator</h4>
+            <span class="text-[11px] text-slate-500">Ticket Dispatch Console</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ ZOON TRUST ═══ -->
+      <div class="gallery-card" data-project="zoon" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/zoon_01_main.png" alt="Zoon Charitable Trust" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-emerald-300 uppercase tracking-wider">Zoon Trust</span>
+              <p class="text-sm font-semibold mt-1">NGO Portal — Homepage</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Zoon — NGO Portal</h4>
+            <span class="text-[11px] text-slate-500">Govt. Registered Charity Platform</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">verified</span> Live</span>
+        </div>
+      </div>
+
+      <!-- ═══ SHALAL APP ═══ -->
+      <div class="gallery-card" data-project="shalalapp" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/shalalapp_01_main.png" alt="Shalal Operations App" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-violet-300 uppercase tracking-wider">Shalal APP</span>
+              <p class="text-sm font-semibold mt-1">Operations Management Portal</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Shalal — Operations App</h4>
+            <span class="text-[11px] text-slate-500">AI-Powered Task Management</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ WHATSAPP API ═══ -->
+      <div class="gallery-card" data-project="whatsapp" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/whatsapp_01_login.png" alt="WhatsApp API Login" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-green-300 uppercase tracking-wider">WhatsApp API</span>
+              <p class="text-sm font-semibold mt-1">Agency Login Portal</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">WhatsApp — Login</h4>
+            <span class="text-[11px] text-slate-500">Meta Business API Gateway</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 2</span>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-project="whatsapp" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/whatsapp_02_dashboard.png" alt="WhatsApp API Dashboard" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-green-300 uppercase tracking-wider">WhatsApp API</span>
+              <p class="text-sm font-semibold mt-1">Campaign Dashboard</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">WhatsApp — Dashboard</h4>
+            <span class="text-[11px] text-slate-500">Message & Campaign Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ X2CRM ═══ -->
+      <div class="gallery-card" data-project="x2crm" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/x2crm_01_cs_tracker.png" alt="X2CRM CS Call Tracker" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-rose-300 uppercase tracking-wider">X2CRM</span>
+              <p class="text-sm font-semibold mt-1">CS Call Tracker — Role Selector</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">X2CRM — Call Tracker</h4>
+            <span class="text-[11px] text-slate-500">Customer Care Workspace</span>
+          </div>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">verified</span> PWA</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- Gallery Stats Bar -->
+    <div class="mt-8 p-4 rounded-2xl bg-gradient-to-r from-[#0b192c] to-[#1e3a5f] flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-center">
+      <div>
+        <span class="block text-2xl font-extrabold text-white">9</span>
+        <span class="text-[10px] font-mono text-sky-300 uppercase tracking-wider">Projects</span>
+      </div>
+      <div class="w-px h-8 bg-white/20"></div>
+      <div>
+        <span class="block text-2xl font-extrabold text-white">20+</span>
+        <span class="text-[10px] font-mono text-sky-300 uppercase tracking-wider">Screenshots</span>
+      </div>
+      <div class="w-px h-8 bg-white/20"></div>
+      <div>
+        <span class="block text-2xl font-extrabold text-white">100%</span>
+        <span class="text-[10px] font-mono text-sky-300 uppercase tracking-wider">Real Production</span>
+      </div>
+      <div class="w-px h-8 bg-white/20"></div>
+      <div>
+        <span class="block text-2xl font-extrabold text-white">2024–26</span>
+        <span class="text-[10px] font-mono text-sky-300 uppercase tracking-wider">Active Period</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="galleryLightbox" onclick="closeLightbox(event)">
+    <button class="lb-close" onclick="closeLightbox(event)"><span class="material-symbols-outlined">close</span></button>
+    <button class="lb-nav lb-prev" onclick="navigateLightbox(event, -1)"><span class="material-symbols-outlined">chevron_left</span></button>
+    <img id="lightboxImg" src="" alt="Gallery Preview" />
+    <button class="lb-nav lb-next" onclick="navigateLightbox(event, 1)"><span class="material-symbols-outlined">chevron_right</span></button>
+    <div class="lb-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- ========================================================================= -->
   <!-- 5. DEVELOPMENT APPROACH & 'VIBE CODING' STORY                             -->
   <!-- ========================================================================= -->
   <section class="py-24 px-6 max-w-6xl mx-auto" data-nav="vibe-coding" id="vibe-coding">
@@ -2008,6 +2639,25 @@
     </div>
   </section>
   <!-- ========================================================================= -->
+  <!-- 9.5 BLOG & THOUGHTS                                                       -->
+  <!-- ========================================================================= -->
+  <section class="py-24 px-6 max-w-6xl mx-auto" data-nav="blog" id="blog">
+    <div class="mb-12">
+      <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-sky-700 uppercase tracking-widest mb-2">
+        <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+        <span>LATEST INSIGHTS</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0b1c30] tracking-tight">Blog &amp; Thoughts</h2>
+      <p class="font-mono text-xs text-slate-500 max-w-lg mt-3">Perspectives on IT Operations, Creative Development, and solving real-world enterprise challenges.</p>
+    </div>
+    
+    <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="col-span-full text-center text-slate-500 font-mono text-sm py-12">
+        Loading latest posts from CMS...
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================= -->
   <!-- 10. CONTACT & TERMINAL                                                   -->
   <!-- ========================================================================= -->
   <footer class="py-24 px-6 bg-gradient-to-b from-[#f8f9ff] via-[#e6f1ff] to-[#d6e7fc] border-t border-sky-200/60"
@@ -2202,27 +2852,25 @@
         d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
     </svg>
   </a>
-  <!-- Interactive System Architecture Inspection Modal -->
-  <div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden"
+  <!-- Interactive System Architecture Inspection Modal / Media Sandbox -->
+  <div class="fixed inset-0 z-[60] bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4 hidden transition-opacity duration-300"
     id="inspectModal">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-4">
-      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-        <h3 class="text-xl font-extrabold text-[#0b1c30]" id="modalSysTitle">System Inspection</h3>
+    <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 flex flex-col max-h-[95vh] overflow-hidden">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 shrink-0">
+        <h3 class="text-xl sm:text-2xl font-extrabold text-[#0b1c30]" id="modalSysTitle">System Inspection</h3>
         <button
-          class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center"
+          class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-red-500 flex items-center justify-center transition-colors"
           onclick="closeModal()">
-          <span class="material-symbols-outlined text-sm">close</span>
+          <span class="material-symbols-outlined">close</span>
         </button>
       </div>
-      <p class="text-slate-600 text-sm leading-relaxed" id="modalSysDesc"></p>
-      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs space-y-1 text-slate-700">
-        <div class="font-bold text-[#0b1c30]">Production Verified SLA:</div>
-        <div>✓ Zero data loss transactional handshake</div>
-        <div>✓ Automated log rolling &amp; error alerts</div>
+      <div class="overflow-y-auto mt-4 pr-2 space-y-6 flex-1" id="modalSysBody" style="scrollbar-width: thin;">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed bg-slate-50 p-5 rounded-2xl border border-slate-100" id="modalSysDesc"></p>
+        <div id="modalSysMedia" class="flex flex-col gap-6"></div>
       </div>
-      <div class="flex justify-end pt-2">
-        <button class="px-4 py-2 rounded-xl bg-[#0b1c30] text-white text-xs font-mono font-semibold"
-          onclick="closeModal()">Done</button>
+      <div class="flex justify-end pt-4 border-t border-slate-100 shrink-0">
+        <button class="px-6 py-2.5 rounded-xl bg-[#0b1c30] hover:bg-sky-900 transition-colors text-white text-sm font-bold"
+          onclick="closeModal()">Close Sandbox</button>
       </div>
     </div>
   </div>
@@ -2253,6 +2901,10 @@
     </a>
     <a class="dock-item" data-dock="creative" href="#creative" title="Creative Work">
       <div class="dock-icon"><span class="material-symbols-outlined" style="font-size:18px">folder_special</span></div>
+      <div class="dock-dot"></div>
+    </a>
+    <a class="dock-item" data-dock="portfolio-gallery" href="#portfolio-gallery" title="Portfolio Gallery">
+      <div class="dock-icon"><span class="material-symbols-outlined" style="font-size:18px">photo_library</span></div>
       <div class="dock-dot"></div>
     </a>
     <a class="dock-item" data-dock="experience" href="#experience" title="Experience">
@@ -2432,11 +3084,61 @@
       });
     }
     function inspectSystem(title, desc) {
+      const projectMap = {
+        'HRM System': 'hrm',
+        'Distribution Management System': 'dist',
+        'x2Queue': 'x2queue',
+        'Zoon': 'zoon',
+        'Shalal': 'shalalapp',
+        'WhatsApp API Agency': 'whatsapp',
+        'CRM System': 'x2crm',
+        'CS Call Tracker': 'x2crm'
+      };
+
+      let matchedId = null;
+      for (const [key, id] of Object.entries(projectMap)) {
+        if (title.includes(key)) {
+          matchedId = id;
+          break;
+        }
+      }
+
       document.getElementById("modalSysTitle").textContent = title;
       document.getElementById("modalSysDesc").textContent = desc;
+
+      const mediaContainer = document.getElementById("modalSysMedia");
+      if (mediaContainer) {
+        mediaContainer.innerHTML = '';
+        if (matchedId) {
+          const cards = document.querySelectorAll('.gallery-card[data-project="'+matchedId+'"] img');
+          let mediaHTML = '';
+          
+          // Future proofing: if any card has a data-video attribute, render it first
+          // Currently, rendering all images found for this project in the gallery DOM
+          cards.forEach(img => {
+            mediaHTML += `<img src="${img.src}" alt="${img.alt}" class="w-full h-auto rounded-xl border border-slate-200 shadow-sm object-contain bg-slate-50" loading="lazy">`;
+          });
+          
+          if(mediaHTML === '') {
+             mediaHTML = '<div class="text-slate-400 text-sm font-mono p-4 bg-slate-50 rounded-xl">No media available for this project.</div>';
+          }
+          mediaContainer.innerHTML = mediaHTML;
+          mediaContainer.classList.remove('hidden');
+        } else {
+          mediaContainer.classList.add('hidden');
+        }
+      }
+
       document.getElementById("inspectModal").classList.remove("hidden");
+      document.body.style.overflow = 'hidden';
     }
-    function closeModal() { document.getElementById("inspectModal").classList.add("hidden"); }
+    
+    function closeModal() { 
+      document.getElementById("inspectModal").classList.add("hidden"); 
+      document.body.style.overflow = '';
+      const mediaContainer = document.getElementById("modalSysMedia");
+      if (mediaContainer) mediaContainer.innerHTML = '';
+    }
     function copyToClipboard(text, label) {
       if (navigator.clipboard) navigator.clipboard.writeText(text);
       showToast("COPIED", `${label}: ${text}`);
@@ -2613,6 +3315,7 @@
           document.getElementById('ai-chat-container').classList.add('mobile-chat-fullscreen');
           document.getElementById('ai-chat-close-btn').classList.remove('hidden');
           document.getElementById('ai-chat-dots').classList.add('hidden');
+          document.body.classList.add('chat-open');
           document.body.style.overflow = 'hidden';
         }
       },
@@ -2621,6 +3324,7 @@
         document.getElementById('ai-chat-container').classList.remove('mobile-chat-fullscreen');
         document.getElementById('ai-chat-close-btn').classList.add('hidden');
         document.getElementById('ai-chat-dots').classList.remove('hidden');
+        document.body.classList.remove('chat-open');
         document.body.style.overflow = '';
       },
 
@@ -2775,6 +3479,118 @@
         item.classList.toggle('active', target === current);
       });
     }, { passive: true });
+
+    // ── 5. Portfolio Gallery — Filter & Lightbox
+    function filterGallery(category) {
+      const cards = document.querySelectorAll('#portfolioGalleryGrid .gallery-card');
+      const buttons = document.querySelectorAll('.gallery-filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.project === category) {
+          card.classList.remove('gallery-hidden');
+          card.style.opacity = '0'; card.style.transform = 'translateY(16px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.4s, transform 0.4s';
+            card.style.opacity = '1'; card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.classList.add('gallery-hidden');
+        }
+      });
+    }
+
+    let lightboxImages = [];
+    let lightboxIndex = 0;
+
+    function openLightbox(cardEl) {
+      const lb = document.getElementById('galleryLightbox');
+      const img = cardEl.querySelector('.gallery-img-wrap img');
+      const captionEl = cardEl.querySelector('.p-4 h4');
+      // Build array of visible images
+      lightboxImages = [];
+      document.querySelectorAll('#portfolioGalleryGrid .gallery-card:not(.gallery-hidden)').forEach((c, i) => {
+        const cImg = c.querySelector('.gallery-img-wrap img');
+        const cCap = c.querySelector('.p-4 h4');
+        lightboxImages.push({ src: cImg.src, caption: cCap ? cCap.textContent : '' });
+        if (c === cardEl) lightboxIndex = i;
+      });
+      document.getElementById('lightboxImg').src = lightboxImages[lightboxIndex].src;
+      document.getElementById('lightboxCaption').textContent = lightboxImages[lightboxIndex].caption;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'galleryLightbox' || e.target.closest('.lb-close')) {
+        document.getElementById('galleryLightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function navigateLightbox(e, dir) {
+      e.stopPropagation();
+      lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+      const lbImg = document.getElementById('lightboxImg');
+      lbImg.style.opacity = '0';
+      setTimeout(() => {
+        lbImg.src = lightboxImages[lightboxIndex].src;
+        document.getElementById('lightboxCaption').textContent = lightboxImages[lightboxIndex].caption;
+        lbImg.style.opacity = '1';
+      }, 150);
+    }
+
+    // Keyboard navigation for lightbox
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('galleryLightbox');
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'Escape') { lb.classList.remove('active'); document.body.style.overflow = ''; }
+      if (e.key === 'ArrowLeft') navigateLightbox(e, -1);
+      if (e.key === 'ArrowRight') navigateLightbox(e, 1);
+    });
+
+    // ── CMS BLOG FETCH ──
+    async function fetchBlogPosts() {
+      const blogGrid = document.getElementById('blogGrid');
+      if (!blogGrid) return;
+      try {
+        const res = await fetch('/api/posts');
+        if(!res.ok) throw new Error('API not reachable');
+        const posts = await res.json();
+        
+        if(posts.length === 0) {
+          blogGrid.innerHTML = '<div class="col-span-full text-center text-slate-500 font-mono text-sm py-12">No posts published yet.</div>';
+          return;
+        }
+        
+        blogGrid.innerHTML = '';
+        posts.forEach(post => {
+          blogGrid.innerHTML += `
+            <article class="p-6 rounded-2xl bg-white border border-slate-200 hover:shadow-lg hover:border-sky-200 transition-all group flex flex-col justify-between">
+              <div>
+                <time class="font-mono text-[10px] text-sky-600 font-bold uppercase tracking-widest mb-3 block">${post.date}</time>
+                <h3 class="text-xl font-bold text-[#0b1c30] mb-3 leading-tight group-hover:text-sky-700 transition-colors">${post.title}</h3>
+                <div class="text-slate-600 text-sm leading-relaxed prose prose-sm max-w-none line-clamp-4">
+                  ${post.content}
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-500">Read Article</span>
+                <span class="material-symbols-outlined text-sm text-sky-600 transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </div>
+            </article>
+          `;
+        });
+      } catch(e) {
+        blogGrid.innerHTML = '<div class="col-span-full text-center text-slate-500 font-mono text-sm py-12">Unable to load blog posts. Backend CMS may be offline.</div>';
+        console.log("CMS fetch error:", e);
+      }
+    }
+    
+    // Fetch posts on load
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchBlogPosts();
+    });
   </script>
 </body>
 
