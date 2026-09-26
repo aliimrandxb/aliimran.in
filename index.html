@@ -31,8 +31,8 @@
     "name": "Ali Imran",
     "alternateName": "AI",
     "jobTitle": "IT Operations Executive & Creative Developer",
-    "url": "https://aliimrangithub.github.io/",
-    "image": "https://aliimrandxb.github.io/ali-imran-profile.jpg",
+    "url": "https://aliimran.in/",
+    "image": "https://aliimran.in/ali-imran-profile.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Dubai",
@@ -413,14 +413,29 @@
 
     /* ── Lanyard / Floating Animations ── */
     @keyframes badgeFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     @keyframes pendulumSwing {
-      0%   { transform: rotate(-8deg); }
-      50%  { transform: rotate(8deg); }
-      100% { transform: rotate(-8deg); }
+      0% {
+        transform: rotate(-8deg);
+      }
+
+      50% {
+        transform: rotate(8deg);
+      }
+
+      100% {
+        transform: rotate(-8deg);
+      }
     }
 
     .animate-badge-float {
@@ -463,12 +478,14 @@
         display: flex;
         flex-direction: column;
       }
+
       .mobile-chat-fullscreen #ai-chat-window {
         height: 100% !important;
         max-height: none !important;
         flex: 1;
         border-radius: 0 !important;
       }
+
       body.chat-open #floatingDock,
       body.chat-open #scrollToTopBtn,
       body.chat-open a[title="Chat with Ali Imran"] {
@@ -574,16 +591,19 @@
       background: #fff;
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
     }
+
     .gallery-card:hover {
       transform: translateY(-6px) scale(1.015);
       box-shadow: 0 24px 48px -12px rgba(11, 25, 44, 0.18);
       border-color: rgba(14, 165, 233, 0.4);
     }
+
     .gallery-card .gallery-img-wrap {
       position: relative;
       overflow: hidden;
       aspect-ratio: 16 / 10;
     }
+
     .gallery-card .gallery-img-wrap img {
       width: 100%;
       height: 100%;
@@ -591,9 +611,11 @@
       object-position: top;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .gallery-card:hover .gallery-img-wrap img {
       transform: scale(1.08);
     }
+
     .gallery-card .gallery-overlay {
       position: absolute;
       inset: 0;
@@ -604,9 +626,11 @@
       align-items: flex-end;
       padding: 20px;
     }
+
     .gallery-card:hover .gallery-overlay {
       opacity: 1;
     }
+
     .gallery-card .gallery-overlay .expand-btn {
       position: absolute;
       top: 16px;
@@ -623,10 +647,12 @@
       color: #fff;
       transition: background 0.2s, transform 0.2s;
     }
+
     .gallery-card .gallery-overlay .expand-btn:hover {
       background: rgba(14, 165, 233, 0.5);
       transform: scale(1.1);
     }
+
     .gallery-filter-btn {
       padding: 6px 16px;
       border-radius: 9999px;
@@ -638,16 +664,19 @@
       color: #64748b;
       transition: all 0.25s;
     }
+
     .gallery-filter-btn:hover {
       background: #f0f9ff;
       border-color: #bae6fd;
       color: #0369a1;
     }
+
     .gallery-filter-btn.active {
       background: #0b192c;
       color: #fff;
       border-color: #0b192c;
     }
+
     .gallery-card.gallery-hidden {
       display: none;
     }
@@ -665,10 +694,12 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
+
     #galleryLightbox.active {
       display: flex;
       opacity: 1;
     }
+
     #galleryLightbox img {
       max-width: 92vw;
       max-height: 88vh;
@@ -676,6 +707,7 @@
       box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
       object-fit: contain;
     }
+
     #galleryLightbox .lb-close {
       position: absolute;
       top: 24px;
@@ -692,10 +724,12 @@
       font-size: 20px;
       transition: background 0.2s, transform 0.2s;
     }
+
     #galleryLightbox .lb-close:hover {
       background: rgba(239, 68, 68, 0.4);
       transform: scale(1.1);
     }
+
     #galleryLightbox .lb-nav {
       position: absolute;
       top: 50%;
@@ -711,12 +745,20 @@
       justify-content: center;
       transition: background 0.2s, transform 0.2s;
     }
+
     #galleryLightbox .lb-nav:hover {
       background: rgba(14, 165, 233, 0.4);
       transform: translateY(-50%) scale(1.1);
     }
-    #galleryLightbox .lb-prev { left: 24px; }
-    #galleryLightbox .lb-next { right: 24px; }
+
+    #galleryLightbox .lb-prev {
+      left: 24px;
+    }
+
+    #galleryLightbox .lb-next {
+      right: 24px;
+    }
+
     #galleryLightbox .lb-caption {
       position: absolute;
       bottom: 24px;
@@ -733,6 +775,7 @@
       font-weight: 500;
       white-space: nowrap;
     }
+
     .gallery-screenshot-count {
       display: inline-flex;
       align-items: center;
@@ -854,19 +897,28 @@
               <a href="https://linkedin.com/in/aliimranin" target="_blank" rel="noopener"
                 class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-400 hover:text-[#0A66C2] hover:border-[#0A66C2] hover:shadow-md transition-all hover:scale-110"
                 title="LinkedIn">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
               </a>
               <!-- GitHub -->
               <a href="https://github.com/aliimrandxb" target="_blank" rel="noopener"
                 class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-400 hover:text-slate-900 hover:border-slate-800 hover:shadow-md transition-all hover:scale-110"
                 title="GitHub">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
               </a>
               <!-- Telegram -->
               <a href="https://t.me/aliimrantalkbot" target="_blank" rel="noopener"
                 class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-400 hover:text-[#229ED9] hover:border-[#229ED9] hover:shadow-md transition-all hover:scale-110"
                 title="Telegram">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                </svg>
               </a>
               <!-- Email -->
               <button onclick="copyToClipboard('alisaraimir@gmail.com', 'Email Address')"
@@ -896,94 +948,115 @@
           <!-- PENDULUM WRAPPER: entire strap + card swings from top -->
           <div class="pendulum-wrapper flex flex-col items-center">
 
-          <!-- HANGING STRAP -->
-          <div class="flex flex-col items-center">
-            <!-- Strap -->
-            <div class="w-2.5 h-16 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-700 rounded-full shadow-md transition-transform duration-500 group-hover:scale-y-95 origin-top"></div>
-            <!-- Metallic Clasp -->
-            <div class="relative flex flex-col items-center -mt-0.5">
-              <!-- Outer ring -->
-              <div class="w-8 h-8 rounded-full border-[3px] border-slate-600 bg-gradient-to-br from-slate-400 via-slate-600 to-slate-800 shadow-[inset_0_1px_3px_rgba(255,255,255,0.3),0_2px_6px_rgba(0,0,0,0.5)] flex items-center justify-center">
-                <!-- Inner bolt -->
-                <div class="w-3.5 h-3.5 rounded-full bg-slate-900 border border-slate-700 shadow-inner"></div>
+            <!-- HANGING STRAP -->
+            <div class="flex flex-col items-center">
+              <!-- Strap -->
+              <div
+                class="w-2.5 h-16 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-700 rounded-full shadow-md transition-transform duration-500 group-hover:scale-y-95 origin-top">
               </div>
-              <!-- Clip bar -->
-              <div class="w-12 h-3.5 bg-gradient-to-r from-slate-500 via-slate-400 to-slate-500 rounded-sm shadow-md border border-slate-600 -mt-1.5"></div>
-            </div>
-          </div>
-
-          <!-- ID CARD -->
-          <div
-            class="relative w-72 sm:w-80 rounded-3xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out transform overflow-visible -mt-1"
-            id="idBadge" style="will-change: transform;">
-
-            <!-- Card top slot (pill) -->
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-2.5 bg-slate-800 rounded-b-full z-10"></div>
-
-            <!-- Purple gradient header area -->
-            <div class="relative h-44 bg-gradient-to-br from-violet-600 via-purple-500 to-indigo-400 rounded-t-3xl overflow-hidden">
-              <!-- Sheen overlay -->
-              <div class="absolute inset-0 bg-gradient-to-bl from-white/20 via-transparent to-transparent"></div>
-            </div>
-            <!-- Profile photo - overlapping header/body boundary -->
-            <div class="absolute left-1/2 -translate-x-1/2" style="top: 108px; z-index: 10;">
-              <div class="w-28 h-28 rounded-full border-4 border-white shadow-2xl overflow-hidden ring-4 ring-teal-400/70">
-                <img src="./ali-imran-profile.jpg" alt="Ali Imran"
-                  class="w-full h-full object-cover" style="object-position: 82% 15%;" />
+              <!-- Metallic Clasp -->
+              <div class="relative flex flex-col items-center -mt-0.5">
+                <!-- Outer ring -->
+                <div
+                  class="w-8 h-8 rounded-full border-[3px] border-slate-600 bg-gradient-to-br from-slate-400 via-slate-600 to-slate-800 shadow-[inset_0_1px_3px_rgba(255,255,255,0.3),0_2px_6px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                  <!-- Inner bolt -->
+                  <div class="w-3.5 h-3.5 rounded-full bg-slate-900 border border-slate-700 shadow-inner"></div>
+                </div>
+                <!-- Clip bar -->
+                <div
+                  class="w-12 h-3.5 bg-gradient-to-r from-slate-500 via-slate-400 to-slate-500 rounded-sm shadow-md border border-slate-600 -mt-1.5">
+                </div>
               </div>
             </div>
 
-            <!-- Card body -->
-            <div class="pt-20 pb-5 px-6 text-center">
-              <!-- Name -->
-              <h3 class="text-xl font-extrabold text-gray-900 tracking-tight">Ali Imran</h3>
-              <!-- Title badge -->
-              <div class="inline-flex items-center mt-1.5 px-3 py-0.5 rounded-full border border-gray-200 bg-gray-50">
-                <span class="text-xs font-semibold text-gray-700">IT Operations Executive &amp; Creative Dev</span>
+            <!-- ID CARD -->
+            <div
+              class="relative w-72 sm:w-80 rounded-3xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out transform overflow-visible -mt-1"
+              id="idBadge" style="will-change: transform;">
+
+              <!-- Card top slot (pill) -->
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-2.5 bg-slate-800 rounded-b-full z-10"></div>
+
+              <!-- Purple gradient header area -->
+              <div
+                class="relative h-44 bg-gradient-to-br from-violet-600 via-purple-500 to-indigo-400 rounded-t-3xl overflow-hidden">
+                <!-- Sheen overlay -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-white/20 via-transparent to-transparent"></div>
               </div>
-
-              <!-- Divider -->
-              <div class="border-t border-gray-100 my-4"></div>
-
-              <!-- Info grid -->
-              <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-left">
-                <div>
-                  <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Specialty</p>
-                  <p class="text-sm font-bold text-gray-900 mt-0.5">IT Ops &amp; Web Dev</p>
-                </div>
-                <div>
-                  <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Location</p>
-                  <p class="text-sm font-bold text-gray-900 mt-0.5">Dubai, UAE</p>
-                </div>
-                <div>
-                  <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Experience</p>
-                  <p class="text-sm font-bold text-gray-900 mt-0.5">9+ Years</p>
-                </div>
-                <div>
-                  <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Status</p>
-                  <p class="text-sm font-bold text-emerald-500 mt-0.5 flex items-center gap-1">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span> Open
-                  </p>
+              <!-- Profile photo - overlapping header/body boundary -->
+              <div class="absolute left-1/2 -translate-x-1/2" style="top: 108px; z-index: 10;">
+                <div
+                  class="w-28 h-28 rounded-full border-4 border-white shadow-2xl overflow-hidden ring-4 ring-teal-400/70">
+                  <img src="./ali-imran-profile.jpg" alt="Ali Imran" class="w-full h-full object-cover"
+                    style="object-position: 82% 15%;" />
                 </div>
               </div>
 
-              <!-- Divider -->
-              <div class="border-t border-gray-100 mt-4 pt-3 flex items-center justify-between">
-                <!-- Barcode visual -->
-                <div class="flex items-end gap-px h-7">
-                  <div class="w-0.5 h-full bg-gray-800"></div><div class="w-1 h-full bg-gray-800"></div><div class="w-0.5 h-4 bg-gray-800"></div><div class="w-1 h-full bg-gray-800"></div><div class="w-0.5 h-5 bg-gray-800"></div><div class="w-1.5 h-full bg-gray-800"></div><div class="w-0.5 h-3 bg-gray-800"></div><div class="w-1 h-full bg-gray-800"></div><div class="w-0.5 h-full bg-gray-800"></div><div class="w-1 h-4 bg-gray-800"></div><div class="w-0.5 h-full bg-gray-800"></div><div class="w-1.5 h-5 bg-gray-800"></div><div class="w-0.5 h-full bg-gray-800"></div><div class="w-1 h-3 bg-gray-800"></div><div class="w-0.5 h-full bg-gray-800"></div>
+              <!-- Card body -->
+              <div class="pt-20 pb-5 px-6 text-center">
+                <!-- Name -->
+                <h3 class="text-xl font-extrabold text-gray-900 tracking-tight">Ali Imran</h3>
+                <!-- Title badge -->
+                <div class="inline-flex items-center mt-1.5 px-3 py-0.5 rounded-full border border-gray-200 bg-gray-50">
+                  <span class="text-xs font-semibold text-gray-700">IT Operations Executive &amp; Creative Dev</span>
                 </div>
-                <!-- ID code -->
-                <div class="text-right">
-                  <p class="text-[9px] font-mono text-gray-400 uppercase tracking-widest">AI-2026-PRO</p>
-                  <p class="text-[8px] font-mono text-gray-300 uppercase tracking-widest">aliimran.in</p>
+
+                <!-- Divider -->
+                <div class="border-t border-gray-100 my-4"></div>
+
+                <!-- Info grid -->
+                <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-left">
+                  <div>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Specialty</p>
+                    <p class="text-sm font-bold text-gray-900 mt-0.5">IT Ops &amp; Web Dev</p>
+                  </div>
+                  <div>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Location</p>
+                    <p class="text-sm font-bold text-gray-900 mt-0.5">Dubai, UAE</p>
+                  </div>
+                  <div>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Experience</p>
+                    <p class="text-sm font-bold text-gray-900 mt-0.5">9+ Years</p>
+                  </div>
+                  <div>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Status</p>
+                    <p class="text-sm font-bold text-emerald-500 mt-0.5 flex items-center gap-1">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span> Open
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-gray-100 mt-4 pt-3 flex items-center justify-between">
+                  <!-- Barcode visual -->
+                  <div class="flex items-end gap-px h-7">
+                    <div class="w-0.5 h-full bg-gray-800"></div>
+                    <div class="w-1 h-full bg-gray-800"></div>
+                    <div class="w-0.5 h-4 bg-gray-800"></div>
+                    <div class="w-1 h-full bg-gray-800"></div>
+                    <div class="w-0.5 h-5 bg-gray-800"></div>
+                    <div class="w-1.5 h-full bg-gray-800"></div>
+                    <div class="w-0.5 h-3 bg-gray-800"></div>
+                    <div class="w-1 h-full bg-gray-800"></div>
+                    <div class="w-0.5 h-full bg-gray-800"></div>
+                    <div class="w-1 h-4 bg-gray-800"></div>
+                    <div class="w-0.5 h-full bg-gray-800"></div>
+                    <div class="w-1.5 h-5 bg-gray-800"></div>
+                    <div class="w-0.5 h-full bg-gray-800"></div>
+                    <div class="w-1 h-3 bg-gray-800"></div>
+                    <div class="w-0.5 h-full bg-gray-800"></div>
+                  </div>
+                  <!-- ID code -->
+                  <div class="text-right">
+                    <p class="text-[9px] font-mono text-gray-400 uppercase tracking-widest">AI-2026-PRO</p>
+                    <p class="text-[8px] font-mono text-gray-300 uppercase tracking-widest">aliimran.in</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div><!-- end idBadge -->
-        </div><!-- end pendulum-wrapper -->
-      </div><!-- end lg:col-span-5 -->
-    </div><!-- end grid -->
+            </div><!-- end idBadge -->
+          </div><!-- end pendulum-wrapper -->
+        </div><!-- end lg:col-span-5 -->
+      </div><!-- end grid -->
       <!-- INTERACTIVE LIVE CODE OBJECT CARD -->
       <div
         class="mt-12 rounded-2xl code-term border border-slate-700/80 p-5 sm:p-6 text-slate-200 font-mono text-xs sm:text-sm shadow-xl reveal-elem revealed">
@@ -1499,11 +1572,17 @@
               animations and mobile mockups.
             </p>
           </div>
-          <a class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-sky-800 font-bold flex items-center justify-between hover:underline"
-            href="https://swaginsider.com" rel="noopener" target="_blank">
-            <span>swaginsider.com</span>
-            <span class="material-symbols-outlined text-xs">open_in_new</span>
-          </a>
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-sky-800 font-bold">
+            <a class="flex items-center gap-1 hover:underline" href="https://swaginsider.com" rel="noopener"
+              target="_blank">
+              <span>swaginsider.com</span>
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </a>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('Swag Insider', 'Creative portfolio &amp; web/app development services platform featuring dynamic network graphic animations and mobile mockups.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
+          </div>
         </div>
         <!-- 2: Zoon Charitable Trust -->
         <div
@@ -1521,11 +1600,17 @@
               families, 499+ children, 49+ medical camps).
             </p>
           </div>
-          <a class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-emerald-800 font-bold flex items-center justify-between hover:underline"
-            href="https://zoontrust.org" rel="noopener" target="_blank">
-            <span>zoontrust.org</span>
-            <span class="material-symbols-outlined text-xs">open_in_new</span>
-          </a>
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-emerald-800 font-bold">
+            <a class="flex items-center gap-1 hover:underline" href="https://zoontrust.org" rel="noopener"
+              target="_blank">
+              <span>zoontrust.org</span>
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </a>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('Zoon Charitable Trust', 'Government-registered NGO management platform with recurring donation payments and impact tracking.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
+          </div>
         </div>
         <!-- 3: Burj Al Sama Website -->
         <div
@@ -1543,11 +1628,17 @@
               galleries and optimized speed.
             </p>
           </div>
-          <a class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-amber-800 font-bold flex items-center justify-between hover:underline"
-            href="https://burjalsama.com" rel="noopener" target="_blank">
-            <span>burjalsama.com</span>
-            <span class="material-symbols-outlined text-xs">open_in_new</span>
-          </a>
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-amber-800 font-bold">
+            <a class="flex items-center gap-1 hover:underline" href="https://burjalsama.com" rel="noopener"
+              target="_blank">
+              <span>burjalsama.com</span>
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </a>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('Burj Al Sama Website', 'Corporate portfolio website for Burj Al Sama Aluminium &amp; Glass LLC (UAE).')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
+          </div>
         </div>
         <!-- 4: Poepik -->
         <div
@@ -1565,8 +1656,12 @@
               alignment and typographic styling.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-indigo-800 font-bold">
-            Available on Oppo App Store
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-indigo-800 font-bold">
+            <span>Available on Oppo App Store</span>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('Poepik', 'AI-powered literary platform for Urdu, Hindi, and English poetry featuring Poefy automatic verse alignment.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
           </div>
         </div>
         <!-- 5: Swag Calculator -->
@@ -1585,8 +1680,12 @@
               UAE, India, and USA with one-tap sharing.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-sky-800 font-bold">
-            Tax Engine &amp; WP Plugin
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-sky-800 font-bold">
+            <span>Tax Engine &amp; WP Plugin</span>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('Swag Calculator', 'Fast VAT &amp; GST calculator Android app + WP plugin for UAE, India, and USA.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
           </div>
         </div>
         <!-- 6: Multi-Language News Portal -->
@@ -1605,8 +1704,12 @@
               modular editorial curation.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-purple-800 font-bold">
-            4-Language Automated CMS
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-purple-800 font-bold">
+            <span>4-Language Automated CMS</span>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('News Portal', 'Aggregated trending feeds in English, Hindi, Urdu, and Bhojpuri with automatic RSS auto-pulling.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
           </div>
         </div>
         <!-- 7: IMPACT App -->
@@ -1625,8 +1728,12 @@
               research documentation.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-teal-800 font-bold">
-            Academic Research System
+          <div
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-teal-800 font-bold">
+            <span>Academic Research System</span>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('IMPACT App', 'Unani Medical assistant system engineered for university faculty and institutional clinical pharmacology research.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
           </div>
         </div>
         <!-- 8: Water Delivery App -->
@@ -1646,9 +1753,14 @@
             </p>
           </div>
           <div
-            class="mt-4 pt-3 border-t border-slate-100 font-mono text-xs text-cyan-800 font-bold flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span>
-            <span>In Progress / Active Build</span>
+            class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-cyan-800 font-bold">
+            <div class="flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span>
+              <span>In Progress / Active Build</span>
+            </div>
+            <button class="text-[#0b1c30] hover:underline flex items-center gap-1"
+              onclick="inspectSystem('Water Delivery', 'Turnkey customer ordering and dynamic delivery tracking application.')">Media
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
           </div>
         </div>
       </div>
@@ -1685,7 +1797,211 @@
       <button class="gallery-filter-btn" onclick="filterGallery('x2crm')">X2CRM</button>
     </div>
     <!-- Gallery Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal-elem stagger-children" id="portfolioGalleryGrid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal-elem stagger-children"
+      id="portfolioGalleryGrid">
+
+      <!-- ═══ ENTERPRISE TASK MONITOR ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="taskmonitor" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/task_monitor_01.jpg" alt="Enterprise Task Monitor Dashboard"
+            loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">Task Monitor</span>
+              <p class="text-sm font-semibold mt-1">Enterprise Operations Dashboard</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Enterprise Task Monitor</h4>
+            <span class="text-[11px] text-slate-500">React Analytics & tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ ENTERPRISE CRM ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="crmshalal" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/crm_dashboard_01.jpg" alt="Enterprise CRM Dashboard" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">CRM System</span>
+              <p class="text-sm font-semibold mt-1">Customer Intelligence Pipeline</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Enterprise CRM</h4>
+            <span class="text-[11px] text-slate-500">Sales Kanban & Analytics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ X2CALL SYSTEM ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="x2call" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/x2call_01.jpg" alt="X2Call Telephony Dashboard" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">X2Call</span>
+              <p class="text-sm font-semibold mt-1">Omnichannel Dialer Hub</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">X2Call Telephony</h4>
+            <span class="text-[11px] text-slate-500">SIP Call Routing UI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SWAG INSIDER ═══ -->
+      <!-- To add more images/videos for other projects, copy this block and change data-project, data-video, and the img src -->
+      <div class="gallery-card gallery-hidden" data-project="swag" data-video="./portfolio-screenshots/swag_demo.mp4"
+        onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="Swag Insider Media" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">Swag Insider</span>
+              <p class="text-sm font-semibold mt-1">Creative Portfolio (Video & Image)</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Swag Insider</h4>
+            <span class="text-[11px] text-slate-500">Media Preview</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ BURJ AL SAMA ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="burj" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="Burj Al Sama" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">Burj Al Sama</span>
+              <p class="text-sm font-semibold mt-1">Corporate Portfolio Website</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Burj Al Sama Website</h4>
+            <span class="text-[11px] text-slate-500">Premium Architecture Showcase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ POEPIK APP ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="poepik" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="Poepik App" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">Poepik</span>
+              <p class="text-sm font-semibold mt-1">AI-Powered Literary App</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Poepik Android App</h4>
+            <span class="text-[11px] text-slate-500">Multilingual Verse Alignment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SWAG CALCULATOR ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="swagcalc" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="Swag Calculator" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">Swag Calculator</span>
+              <p class="text-sm font-semibold mt-1">VAT & GST Tax Engine</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Swag Calculator</h4>
+            <span class="text-[11px] text-slate-500">Tax Engine Android/Web Plugin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ MULTI-LANGUAGE NEWS PORTAL ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="news" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="News Portal" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">News Portal</span>
+              <p class="text-sm font-semibold mt-1">4-Language Automated CMS</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">News Portal</h4>
+            <span class="text-[11px] text-slate-500">Automated RSS CMS Engine</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ IMPACT APP ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="impact" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="IMPACT App" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-sky-300 uppercase tracking-wider">IMPACT</span>
+              <p class="text-sm font-semibold mt-1">Academic Research System</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">IMPACT App</h4>
+            <span class="text-[11px] text-slate-500">Institutional Medical Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ WATER DELIVERY APP ═══ -->
+      <div class="gallery-card gallery-hidden" data-project="water" onclick="openLightbox(this)">
+        <div class="gallery-img-wrap">
+          <img src="./portfolio-screenshots/placeholder.png" alt="Water Delivery App" loading="lazy" />
+          <div class="gallery-overlay">
+            <button class="expand-btn"><span class="material-symbols-outlined">fullscreen</span></button>
+            <div class="text-white">
+              <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider">Delivery App</span>
+              <p class="text-sm font-semibold mt-1">Customer Logistics & Ordering</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-[#0b1c30]">Water Delivery App</h4>
+            <span class="text-[11px] text-slate-500">Active Build / In Progress</span>
+          </div>
+        </div>
+      </div>
 
       <!-- ═══ HRM SYSTEM ═══ -->
       <div class="gallery-card" data-project="hrm" onclick="openLightbox(this)">
@@ -1704,7 +2020,8 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Login Portal</h4>
             <span class="text-[11px] text-slate-500">Enterprise Access Gateway</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 6</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">photo_camera</span> 6</span>
         </div>
       </div>
 
@@ -1724,7 +2041,8 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">HRM — Command Matrix</h4>
             <span class="text-[11px] text-slate-500">Real-time Alert Dashboard</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">verified</span> Live</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">verified</span> Live</span>
         </div>
       </div>
 
@@ -1821,7 +2139,8 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">Distribution — Login</h4>
             <span class="text-[11px] text-slate-500">Glassmorphic Split Panel</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 5</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">photo_camera</span> 5</span>
         </div>
       </div>
 
@@ -1918,7 +2237,8 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">x2Queue — Login Portal</h4>
             <span class="text-[11px] text-slate-500">Access Control Panel</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 4</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">photo_camera</span> 4</span>
         </div>
       </div>
 
@@ -1977,7 +2297,8 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">Zoon — NGO Portal</h4>
             <span class="text-[11px] text-slate-500">Govt. Registered Charity Platform</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">verified</span> Live</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">verified</span> Live</span>
         </div>
       </div>
 
@@ -2018,7 +2339,8 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">WhatsApp — Login</h4>
             <span class="text-[11px] text-slate-500">Meta Business API Gateway</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">photo_camera</span> 2</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">photo_camera</span> 2</span>
         </div>
       </div>
 
@@ -2058,13 +2380,15 @@
             <h4 class="text-sm font-bold text-[#0b1c30]">X2CRM — Call Tracker</h4>
             <span class="text-[11px] text-slate-500">Customer Care Workspace</span>
           </div>
-          <span class="gallery-screenshot-count"><span class="material-symbols-outlined" style="font-size:12px">verified</span> PWA</span>
+          <span class="gallery-screenshot-count"><span class="material-symbols-outlined"
+              style="font-size:12px">verified</span> PWA</span>
         </div>
       </div>
 
     </div>
     <!-- Gallery Stats Bar -->
-    <div class="mt-8 p-4 rounded-2xl bg-gradient-to-r from-[#0b192c] to-[#1e3a5f] flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-center">
+    <div
+      class="mt-8 p-4 rounded-2xl bg-gradient-to-r from-[#0b192c] to-[#1e3a5f] flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-center">
       <div>
         <span class="block text-2xl font-extrabold text-white">9</span>
         <span class="text-[10px] font-mono text-sky-300 uppercase tracking-wider">Projects</span>
@@ -2089,10 +2413,13 @@
 
   <!-- Lightbox Modal -->
   <div id="galleryLightbox" onclick="closeLightbox(event)">
-    <button class="lb-close" onclick="closeLightbox(event)"><span class="material-symbols-outlined">close</span></button>
-    <button class="lb-nav lb-prev" onclick="navigateLightbox(event, -1)"><span class="material-symbols-outlined">chevron_left</span></button>
+    <button class="lb-close" onclick="closeLightbox(event)"><span
+        class="material-symbols-outlined">close</span></button>
+    <button class="lb-nav lb-prev" onclick="navigateLightbox(event, -1)"><span
+        class="material-symbols-outlined">chevron_left</span></button>
     <img id="lightboxImg" src="" alt="Gallery Preview" />
-    <button class="lb-nav lb-next" onclick="navigateLightbox(event, 1)"><span class="material-symbols-outlined">chevron_right</span></button>
+    <button class="lb-nav lb-next" onclick="navigateLightbox(event, 1)"><span
+        class="material-symbols-outlined">chevron_right</span></button>
     <div class="lb-caption" id="lightboxCaption"></div>
   </div>
 
@@ -2554,103 +2881,127 @@
           <span class="w-2 h-2 rounded-full bg-sky-600"></span>
           <span>08 / CURIOSITIES &amp; CLARIFICATIONS</span>
         </div>
-      <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden max-w-3xl mx-auto transition-all" id="ai-chat-container">
-        <!-- Chat Header -->
-        <div class="bg-[#0b1c30] px-4 py-3 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-white/10 overflow-hidden border border-white/20">
-              <img src="./ali-imran-profile.jpg" alt="AI" class="w-full h-full object-cover" />
-            </div>
-            <div>
-              <div class="text-white text-sm font-bold flex items-center gap-1.5">
-                The Real AI <span class="material-symbols-outlined text-sky-400 text-[14px]">verified</span>
-              </div>
-              <div class="text-sky-200/70 text-[10px] font-mono flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online and ready to answer
-              </div>
-            </div>
-          </div>
-          <div class="flex items-center gap-2">
-            <button id="ai-chat-close-btn" class="hidden text-white/50 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors" onclick="aiChat.closeFullscreen()">
-              <span class="material-symbols-outlined text-lg">close</span>
-            </button>
-            <div class="flex gap-1.5" id="ai-chat-dots">
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Chat Body -->
-        <div class="p-4 sm:p-6 bg-slate-50/80 flex flex-col h-[60vh] min-h-[400px] max-h-[600px] md:h-[500px] relative transition-all" id="ai-chat-window">
-          
-          <!-- Scrollable Chat History -->
-          <div id="ai-chat-history" class="flex-1 overflow-y-auto space-y-4 pr-2 mb-16 scrollbar-hide">
-            <!-- Initial Greeting -->
-            <div class="flex items-start gap-2">
-              <div class="w-7 h-7 mt-1 rounded-full bg-white flex-shrink-0 overflow-hidden border border-slate-200 shadow-sm">
+        <div
+          class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden max-w-3xl mx-auto transition-all"
+          id="ai-chat-container">
+          <!-- Chat Header -->
+          <div class="bg-[#0b1c30] px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-white/10 overflow-hidden border border-white/20">
                 <img src="./ali-imran-profile.jpg" alt="AI" class="w-full h-full object-cover" />
               </div>
-              <div class="bg-white border border-slate-200 px-4 py-3 rounded-2xl rounded-tl-sm text-slate-600 text-sm leading-relaxed shadow-sm max-w-[90%]">
-                Hi! I'm the digital AI version of Ali Imran. You can ask me any of the questions below, or type a custom message to start a conversation!
+              <div>
+                <div class="text-white text-sm font-bold flex items-center gap-1.5">
+                  The Real AI <span class="material-symbols-outlined text-sky-400 text-[14px]">verified</span>
+                </div>
+                <div class="text-sky-200/70 text-[10px] font-mono flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online and ready to answer
+                </div>
               </div>
             </div>
-            
-            <!-- Suggested Prompts Container -->
-            <div id="ai-suggested-prompts" class="flex flex-wrap gap-2 pt-2">
-              <button onclick="aiChat.askFAQ(0)" class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
-                Who or What is "The Real AI"?
+            <div class="flex items-center gap-2">
+              <button id="ai-chat-close-btn"
+                class="hidden text-white/50 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
+                onclick="aiChat.closeFullscreen()">
+                <span class="material-symbols-outlined text-lg">close</span>
               </button>
-              <button onclick="aiChat.askFAQ(1)" class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
-                Do you accept global projects?
-              </button>
-              <button onclick="aiChat.askFAQ(2)" class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
-                Can you build an app from scratch?
-              </button>
-              <button onclick="aiChat.askFAQ(3)" class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
-                IT Operations vs Creative Dev?
-              </button>
-              <button onclick="aiChat.askFAQ(4)" class="px-3 py-1.5 bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-xl text-xs font-bold hover:bg-emerald-200 transition-colors text-left transition-transform hover:scale-[1.02]">
-                Contact details & Mobile No.?
-              </button>
-            </div>
-            
-            <!-- Typing Indicator (Hidden by default) -->
-            <div id="ai-typing-indicator" class="hidden items-center gap-1.5 text-slate-400 text-xs pl-11 mb-2">
-              <div class="bg-white border border-slate-200 px-3 py-2 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style="animation-delay: 0.1s"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style="animation-delay: 0.2s"></span>
+              <div class="flex gap-1.5" id="ai-chat-dots">
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
               </div>
             </div>
           </div>
-          
-          <!-- Chat Input -->
-          <form id="ai-chat-form" class="absolute bottom-4 left-4 right-4 flex items-center" onsubmit="aiChat.handleSubmit(event)">
-            <input type="text" id="ai-chat-input" placeholder="Type a message to chat with me..." onfocus="aiChat.openFullscreen()"
-              class="w-full pl-4 pr-12 py-3 rounded-2xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none shadow-sm" autocomplete="off" />
-            <button type="submit" class="absolute right-1.5 p-2 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition-colors flex items-center justify-center shadow-md disabled:opacity-50" id="ai-chat-submit">
-              <span class="material-symbols-outlined text-[18px]">send</span>
-            </button>
-          </form>
+
+          <!-- Chat Body -->
+          <div
+            class="p-4 sm:p-6 bg-slate-50/80 flex flex-col h-[60vh] min-h-[400px] max-h-[600px] md:h-[500px] relative transition-all"
+            id="ai-chat-window">
+
+            <!-- Scrollable Chat History -->
+            <div id="ai-chat-history" class="flex-1 overflow-y-auto space-y-4 pr-2 mb-16 scrollbar-hide">
+              <!-- Initial Greeting -->
+              <div class="flex items-start gap-2">
+                <div
+                  class="w-7 h-7 mt-1 rounded-full bg-white flex-shrink-0 overflow-hidden border border-slate-200 shadow-sm">
+                  <img src="./ali-imran-profile.jpg" alt="AI" class="w-full h-full object-cover" />
+                </div>
+                <div
+                  class="bg-white border border-slate-200 px-4 py-3 rounded-2xl rounded-tl-sm text-slate-600 text-sm leading-relaxed shadow-sm max-w-[90%]">
+                  Hi! I'm the digital AI version of Ali Imran. You can ask me any of the questions below, or type a
+                  custom message to start a conversation!
+                </div>
+              </div>
+
+              <!-- Suggested Prompts Container -->
+              <div id="ai-suggested-prompts" class="flex flex-wrap gap-2 pt-2">
+                <button onclick="aiChat.askFAQ(0)"
+                  class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
+                  Who or What is "The Real AI"?
+                </button>
+                <button onclick="aiChat.askFAQ(1)"
+                  class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
+                  Do you accept global projects?
+                </button>
+                <button onclick="aiChat.askFAQ(2)"
+                  class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
+                  Can you build an app from scratch?
+                </button>
+                <button onclick="aiChat.askFAQ(3)"
+                  class="px-3 py-1.5 bg-sky-100 text-sky-800 border border-sky-200 rounded-xl text-xs font-medium hover:bg-sky-200 transition-colors text-left transition-transform hover:scale-[1.02]">
+                  IT Operations vs Creative Dev?
+                </button>
+                <button onclick="aiChat.askFAQ(4)"
+                  class="px-3 py-1.5 bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-xl text-xs font-bold hover:bg-emerald-200 transition-colors text-left transition-transform hover:scale-[1.02]">
+                  Contact details & Mobile No.?
+                </button>
+              </div>
+
+              <!-- Typing Indicator (Hidden by default) -->
+              <div id="ai-typing-indicator" class="hidden items-center gap-1.5 text-slate-400 text-xs pl-11 mb-2">
+                <div
+                  class="bg-white border border-slate-200 px-3 py-2 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce"
+                    style="animation-delay: 0.1s"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce"
+                    style="animation-delay: 0.2s"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Input -->
+            <form id="ai-chat-form" class="absolute bottom-4 left-4 right-4 flex items-center"
+              onsubmit="aiChat.handleSubmit(event)">
+              <input type="text" id="ai-chat-input" placeholder="Type a message to chat with me..."
+                onfocus="aiChat.openFullscreen()"
+                class="w-full pl-4 pr-12 py-3 rounded-2xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none shadow-sm"
+                autocomplete="off" />
+              <button type="submit"
+                class="absolute right-1.5 p-2 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition-colors flex items-center justify-center shadow-md disabled:opacity-50"
+                id="ai-chat-submit">
+                <span class="material-symbols-outlined text-[18px]">send</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
   </section>
   <!-- ========================================================================= -->
   <!-- 9.5 BLOG & THOUGHTS                                                       -->
   <!-- ========================================================================= -->
   <section class="py-24 px-6 max-w-6xl mx-auto" data-nav="blog" id="blog">
     <div class="mb-12">
-      <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-sky-700 uppercase tracking-widest mb-2">
+      <div
+        class="inline-flex items-center gap-2 font-mono text-xs font-bold text-sky-700 uppercase tracking-widest mb-2">
         <span class="w-2 h-2 rounded-full bg-sky-600"></span>
         <span>LATEST INSIGHTS</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0b1c30] tracking-tight">Blog &amp; Thoughts</h2>
-      <p class="font-mono text-xs text-slate-500 max-w-lg mt-3">Perspectives on IT Operations, Creative Development, and solving real-world enterprise challenges.</p>
+      <p class="font-mono text-xs text-slate-500 max-w-lg mt-3">Perspectives on IT Operations, Creative Development, and
+        solving real-world enterprise challenges.</p>
     </div>
-    
+
     <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="col-span-full text-center text-slate-500 font-mono text-sm py-12">
         Loading latest posts from CMS...
@@ -2689,7 +3040,10 @@
                 class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-between group/link">
                 <div class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-[#229ED9]/20 text-[#229ED9] flex items-center justify-center">
-                    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
                   </div>
                   <div>
                     <span class="text-[10px] text-slate-400 block uppercase">Telegram Bot</span>
@@ -2827,9 +3181,12 @@
           <a class="flex items-center gap-1.5 hover:text-sky-700 transition-colors" href="mailto:alisaraimir@gmail.com">
             <span class="material-symbols-outlined text-[16px]">mail</span> Email
           </a>
-          <a class="flex items-center gap-1.5 hover:text-sky-700 transition-colors"
-            href="https://t.me/aliimrantalkbot" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> Telegram
+          <a class="flex items-center gap-1.5 hover:text-sky-700 transition-colors" href="https://t.me/aliimrantalkbot"
+            target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.432.895-.647 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+            </svg> Telegram
           </a>
         </div>
       </div>
@@ -2853,9 +3210,11 @@
     </svg>
   </a>
   <!-- Interactive System Architecture Inspection Modal / Media Sandbox -->
-  <div class="fixed inset-0 z-[60] bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4 hidden transition-opacity duration-300"
+  <div
+    class="fixed inset-0 z-[60] bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4 hidden transition-opacity duration-300"
     id="inspectModal">
-    <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 flex flex-col max-h-[95vh] overflow-hidden">
+    <div
+      class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 flex flex-col max-h-[95vh] overflow-hidden">
       <div class="flex items-center justify-between pb-4 border-b border-slate-100 shrink-0">
         <h3 class="text-xl sm:text-2xl font-extrabold text-[#0b1c30]" id="modalSysTitle">System Inspection</h3>
         <button
@@ -2865,11 +3224,13 @@
         </button>
       </div>
       <div class="overflow-y-auto mt-4 pr-2 space-y-6 flex-1" id="modalSysBody" style="scrollbar-width: thin;">
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed bg-slate-50 p-5 rounded-2xl border border-slate-100" id="modalSysDesc"></p>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed bg-slate-50 p-5 rounded-2xl border border-slate-100"
+          id="modalSysDesc"></p>
         <div id="modalSysMedia" class="flex flex-col gap-6"></div>
       </div>
       <div class="flex justify-end pt-4 border-t border-slate-100 shrink-0">
-        <button class="px-6 py-2.5 rounded-xl bg-[#0b1c30] hover:bg-sky-900 transition-colors text-white text-sm font-bold"
+        <button
+          class="px-6 py-2.5 rounded-xl bg-[#0b1c30] hover:bg-sky-900 transition-colors text-white text-sm font-bold"
           onclick="closeModal()">Close Sandbox</button>
       </div>
     </div>
@@ -3091,8 +3452,17 @@
         'Zoon': 'zoon',
         'Shalal': 'shalalapp',
         'WhatsApp API Agency': 'whatsapp',
-        'CRM System': 'x2crm',
-        'CS Call Tracker': 'x2crm'
+        'CRM System': 'crmshalal',
+        'CS Call Tracker': 'x2crm',
+        'X2Call System': 'x2call',
+        'Task Monitor': 'taskmonitor',
+        'Swag Insider': 'swag',
+        'Burj Al Sama': 'burj',
+        'Poepik': 'poepik',
+        'Swag Calculator': 'swagcalc',
+        'News Portal': 'news',
+        'IMPACT': 'impact',
+        'Water Delivery': 'water'
       };
 
       let matchedId = null;
@@ -3110,17 +3480,22 @@
       if (mediaContainer) {
         mediaContainer.innerHTML = '';
         if (matchedId) {
-          const cards = document.querySelectorAll('.gallery-card[data-project="'+matchedId+'"] img');
+          const cards = document.querySelectorAll('.gallery-card[data-project="' + matchedId + '"]');
           let mediaHTML = '';
-          
-          // Future proofing: if any card has a data-video attribute, render it first
-          // Currently, rendering all images found for this project in the gallery DOM
-          cards.forEach(img => {
-            mediaHTML += `<img src="${img.src}" alt="${img.alt}" class="w-full h-auto rounded-xl border border-slate-200 shadow-sm object-contain bg-slate-50" loading="lazy">`;
+
+          cards.forEach(card => {
+            const videoSrc = card.getAttribute('data-video');
+            const img = card.querySelector('img');
+
+            if (videoSrc) {
+              mediaHTML += `<video src="${videoSrc}" controls autoplay muted class="w-full h-auto rounded-xl border border-slate-200 shadow-sm bg-slate-900"></video>`;
+            } else if (img) {
+              mediaHTML += `<img src="${img.src}" alt="${img.alt}" class="w-full h-auto rounded-xl border border-slate-200 shadow-sm object-contain bg-slate-50" loading="lazy">`;
+            }
           });
-          
-          if(mediaHTML === '') {
-             mediaHTML = '<div class="text-slate-400 text-sm font-mono p-4 bg-slate-50 rounded-xl">No media available for this project.</div>';
+
+          if (mediaHTML === '') {
+            mediaHTML = '<div class="text-slate-400 text-sm font-mono p-4 bg-slate-50 rounded-xl">No media available for this project.</div>';
           }
           mediaContainer.innerHTML = mediaHTML;
           mediaContainer.classList.remove('hidden');
@@ -3132,9 +3507,9 @@
       document.getElementById("inspectModal").classList.remove("hidden");
       document.body.style.overflow = 'hidden';
     }
-    
-    function closeModal() { 
-      document.getElementById("inspectModal").classList.add("hidden"); 
+
+    function closeModal() {
+      document.getElementById("inspectModal").classList.add("hidden");
       document.body.style.overflow = '';
       const mediaContainer = document.getElementById("modalSysMedia");
       if (mediaContainer) mediaContainer.innerHTML = '';
@@ -3309,7 +3684,7 @@
         { keywords: ["resume", "cv", "download"], answer: "I don't have a direct download link here, but if you leave your contact details below, I'd be happy to email you my complete, updated Resume/CV." },
         { keywords: ["hello", "hi", "hey", "assalamualaikum", "greetings"], answer: "Walaikum Assalam / Hello! I am the AI assistant of Ali Imran. How can I help you today? You can ask me about his experience, projects, or just type a message to send directly to him." }
       ],
-      
+
       openFullscreen() {
         if (window.innerWidth < 768) {
           document.getElementById('ai-chat-container').classList.add('mobile-chat-fullscreen');
@@ -3332,7 +3707,7 @@
         const history = document.getElementById('ai-chat-history');
         const indicator = document.getElementById('ai-typing-indicator');
         const msgDiv = document.createElement('div');
-        
+
         if (isUser) {
           msgDiv.className = 'flex items-end justify-end gap-2 animate-fade-in-up';
           msgDiv.innerHTML = `<div class="bg-sky-600 px-4 py-2.5 rounded-2xl rounded-br-sm text-white text-sm font-medium shadow-sm max-w-[85%]">${text}</div>`;
@@ -3347,7 +3722,7 @@
             </div>
           `;
         }
-        
+
         history.insertBefore(msgDiv, indicator);
         history.scrollTop = history.scrollHeight;
       },
@@ -3371,7 +3746,7 @@
         document.getElementById('ai-suggested-prompts').classList.add('hidden');
         this.addMessage(this.faqTitles[index], true);
         this.showTyping();
-        
+
         setTimeout(() => {
           this.hideTyping();
           this.addMessage(this.faqs[index]);
@@ -3384,7 +3759,7 @@
         const input = document.getElementById('ai-chat-input');
         const text = input.value.trim();
         if (!text) return;
-        
+
         document.getElementById('ai-suggested-prompts').classList.add('hidden');
         input.value = '';
         this.addMessage(text, true);
@@ -3392,7 +3767,7 @@
 
         setTimeout(async () => {
           this.hideTyping();
-          
+
           if (this.state === 0) {
             // Check for keywords in the Knowledge Base
             const lowerText = text.toLowerCase();
@@ -3414,7 +3789,7 @@
               this.addMessage("That sounds really interesting! Before we dive deeper, could you briefly describe what kind of project or specific requirements you have in mind?");
               this.state = 1;
             }
-          } 
+          }
           else if (this.state === 1) {
             this.userData.requirement = text;
             this.addMessage("Got it, that helps a lot! I'd love to connect and discuss this further. Could you please tell me your Name or Organization?");
@@ -3424,20 +3799,20 @@
             this.userData.name = text;
             this.addMessage(`Great to meet you, ${this.userData.name}! Finally, what is your email or Telegram handle so I can reach you back?`);
             this.state = 3;
-          } 
+          }
           else if (this.state === 3) {
             this.userData.contact = text;
             this.state = 4;
             document.getElementById('ai-chat-input').disabled = true;
             document.getElementById('ai-chat-submit').disabled = true;
             this.addMessage("Got it! I am transmitting your dispatch to Ali Imran's Terminal via secure Telegram Bot API now...");
-            
+
             // Trigger Telegram Fetch
             const botToken = '8906725635:AAG7qraKOMSlneDIqTgZZMC5v2E3HRq2ano';
             const chatId = '8681515130';
             const payload = `🚀 *New Bot Chat Inquiry*\n\n*Name:* ${this.userData.name}\n*Contact:* ${this.userData.contact}\n*Requirements:* ${this.userData.requirement}\n*Initial Msg:* ${this.userData.message}`;
             const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-            
+
             this.showTyping();
             try {
               const response = await fetch(telegramApiUrl, {
@@ -3481,11 +3856,21 @@
     }, { passive: true });
 
     // ── 5. Portfolio Gallery — Filter & Lightbox
-    function filterGallery(category) {
+    function filterGallery(category, btnEl) {
       const cards = document.querySelectorAll('#portfolioGalleryGrid .gallery-card');
       const buttons = document.querySelectorAll('.gallery-filter-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+      const targetBtn = btnEl || (window.event ? (window.event.currentTarget || window.event.target) : null);
+      if (targetBtn && targetBtn.classList && targetBtn.classList.contains('gallery-filter-btn')) {
+        targetBtn.classList.add('active');
+      } else {
+        // Fallback: match button by onclick attribute containing category
+        buttons.forEach(btn => {
+          if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${category}'`)) {
+            btn.classList.add('active');
+          }
+        });
+      }
       cards.forEach(card => {
         if (category === 'all' || card.dataset.project === category) {
           card.classList.remove('gallery-hidden');
@@ -3498,6 +3883,12 @@
           card.classList.add('gallery-hidden');
         }
       });
+    }
+
+    function showProjectGallery(projectId) {
+      filterGallery(projectId);
+      const gallerySec = document.getElementById('portfolio-gallery');
+      if (gallerySec) gallerySec.scrollIntoView({ behavior: 'smooth' });
     }
 
     let lightboxImages = [];
@@ -3555,14 +3946,14 @@
       if (!blogGrid) return;
       try {
         const res = await fetch('/api/posts');
-        if(!res.ok) throw new Error('API not reachable');
+        if (!res.ok) throw new Error('API not reachable');
         const posts = await res.json();
-        
-        if(posts.length === 0) {
+
+        if (posts.length === 0) {
           blogGrid.innerHTML = '<div class="col-span-full text-center text-slate-500 font-mono text-sm py-12">No posts published yet.</div>';
           return;
         }
-        
+
         blogGrid.innerHTML = '';
         posts.forEach(post => {
           blogGrid.innerHTML += `
@@ -3581,12 +3972,12 @@
             </article>
           `;
         });
-      } catch(e) {
+      } catch (e) {
         blogGrid.innerHTML = '<div class="col-span-full text-center text-slate-500 font-mono text-sm py-12">Unable to load blog posts. Backend CMS may be offline.</div>';
         console.log("CMS fetch error:", e);
       }
     }
-    
+
     // Fetch posts on load
     document.addEventListener('DOMContentLoaded', () => {
       fetchBlogPosts();
